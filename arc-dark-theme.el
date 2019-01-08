@@ -114,4 +114,11 @@
  '(undo-tree-visualizer-unmodified-face ((t (:foreground "#56B6C2"))))
  '(default ((t (:background "#21252b" :foreground "white")))))
 
+;;;###autoload
+(and load-file-name
+    (boundp 'custom-theme-load-path)
+    (add-to-list 'custom-theme-load-path
+                 (file-name-as-directory
+                  (file-name-directory load-file-name))))
+
 (provide-theme 'arc-dark)
