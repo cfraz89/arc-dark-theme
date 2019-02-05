@@ -1,3 +1,11 @@
+;;; arc-dark-theme.el --- Arc-dark for emacs
+
+;;; Commentary:
+;;
+;; Arc dark theme for emacs
+;;
+;;; Code:
+
 (deftheme arc-dark
   "Based on atom-one-dark, basic colors adapted for arc-dark gtk theme")
 
@@ -18,20 +26,20 @@
  '(shadow ((((class color grayscale) (min-colors 88) (background light)) (:foreground "grey50")) (((class color grayscale) (min-colors 88) (background dark)) (:foreground "grey70")) (((class color) (min-colors 8) (background light)) (:foreground "green")) (((class color) (min-colors 8) (background dark)) (:foreground "yellow"))))
  '(secondary-selection ((t (:background "#121417"))))
  '(trailing-whitespace ((((class color) (background light)) (:background "red1")) (((class color) (background dark)) (:background "red1")) (t (:inverse-video t))))
- '(font-lock-builtin-face ((t (:foreground "#56B6C2"))))
+ '(font-lock-builtin-face ((t (:foreground "#99dcfe"))))
  '(font-lock-comment-delimiter-face ((default (:inherit (font-lock-comment-face)))))
  '(font-lock-comment-face ((t (:foreground "#5C6370"))))
- '(font-lock-constant-face ((t (:foreground "#56B6C2"))))
+ '(font-lock-constant-face ((t (:foreground "#009ddc"))))
  '(font-lock-doc-face ((t (:inherit (font-lock-string-face)))))
  '(font-lock-function-name-face ((t (:foreground "#dcdcaa"))))
- '(font-lock-keyword-face ((t (:foreground "#5294e2" :weight normal))))
+ '(font-lock-keyword-face ((t (:foreground "#fff" :weight normal))))
  '(font-lock-negation-char-face ((t nil)))
  '(font-lock-preprocessor-face ((t (:foreground " #dcdcaa"))))
  '(font-lock-regexp-grouping-backslash ((t (:inherit (bold)))))
  '(font-lock-regexp-grouping-construct ((t (:inherit (bold)))))
- '(font-lock-string-face ((t (:foreground "#98C379"))))
- '(font-lock-type-face ((t (:foreground "#9cdcfe"))))
- '(font-lock-variable-name-face ((t (:foreground "#ce9178"))))
+ '(font-lock-string-face ((t (:foreground "#7cb461"))))
+ '(font-lock-type-face ((t (:foreground "#569cd6"))))
+ '(font-lock-variable-name-face ((t (:foreground "#fff"))))
  '(font-lock-warning-face ((t (:foreground "#5C6370" :bold t))))
  '(button ((t (:inherit (link)))))
  '(link ((t (:foreground "#61AFEF" :underline t :weight bold))))
@@ -122,3 +130,7 @@
                   (file-name-directory load-file-name))))
 
 (provide-theme 'arc-dark)
+
+(provide 'arc-dark-theme)
+
+;;; arc-dark-theme.el ends here
