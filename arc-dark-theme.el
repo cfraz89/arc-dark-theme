@@ -1,10 +1,32 @@
-;;; arc-dark-theme.el --- Arc-dark for emacs
+;;; arc-dark-theme.el ---Arc dark theme              -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2019  Christopher Fraser
+
+;; Author: Christopher Fraser <cfraz89@gmail.com>
+;; Version: 0.1.0
+;; Keywords:faces, theme
+;; Package-Requires: ((emacs "24"))
+;; URL: https://github.com/cfraz89/arc-dark-theme
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-;;
-;; Arc dark theme for emacs
-;;
+
+;; A theme to match ark-dark for gtk. Based on atom-one-dark
+
 ;;; Code:
+
 
 (deftheme arc-dark
   "Based on atom-one-dark, basic colors adapted for arc-dark gtk theme")
@@ -16,16 +38,18 @@
 (custom-theme-set-faces
  'arc-dark
  '(cursor ((t (:background "white"))))
- '(fixed-pitch ((t (:family "Monospace"))))
- '(variable-pitch ((((type w32)) (:foundry "outline" :family "Arial")) (t (:family "Sans Serif"))))
  '(escape-glyph ((((background dark)) (:foreground "cyan")) (((type pc)) (:foreground "magenta")) (t (:foreground "brown"))))
  '(homoglyph ((((background dark)) (:foreground "cyan")) (((type pc)) (:foreground "magenta")) (t (:foreground "brown"))))
  '(minibuffer-prompt ((t (:foreground "#9DA5B4"))))
  '(highlight ((t (:background "#4e5868"))))
  '(region ((t (:background "#3c4450"))))
- '(shadow ((((class color grayscale) (min-colors 88) (background light)) (:foreground "grey50")) (((class color grayscale) (min-colors 88) (background dark)) (:foreground "grey70")) (((class color) (min-colors 8) (background light)) (:foreground "green")) (((class color) (min-colors 8) (background dark)) (:foreground "yellow"))))
+ '(shadow ((((class color grayscale) (min-colors 88) (background light)) (:foreground "grey50"))
+           (((class color grayscale) (min-colors 88) (background dark)) (:foreground "grey70"))
+           (((class color) (min-colors 8) (background light)) (:foreground "green"))
+           (((class color) (min-colors 8) (background dark)) (:foreground "yellow"))))
  '(secondary-selection ((t (:background "#121417"))))
- '(trailing-whitespace ((((class color) (background light)) (:background "red1")) (((class color) (background dark)) (:background "red1")) (t (:inverse-video t))))
+ '(trailing-whitespace ((((class color) (background light)) (:background "red1"))
+                        (((class color) (background dark)) (:background "red1")) (t (:inverse-video t))))
  '(font-lock-builtin-face ((t (:foreground "#569cd6"))))
  '(font-lock-comment-delimiter-face ((default (:inherit (font-lock-comment-face)))))
  '(font-lock-comment-face ((t (:foreground "#5C6370"))))
@@ -45,7 +69,11 @@
  '(link ((t (:foreground "#61AFEF" :underline t :weight bold))))
  '(link-visited ((t (:foreground "#61AFEF" :underline t :weight normal))))
  '(fringe ((t (:background "#21252b"))))
- '(header-line ((default (:inherit (mode-line))) (((type tty)) (:underline (:color foreground-color :style line) :inverse-video nil)) (((class color grayscale) (background light)) (:box nil :foreground "grey20" :background "grey90")) (((class color grayscale) (background dark)) (:box nil :foreground "grey90" :background "grey20")) (((class mono) (background light)) (:underline (:color foreground-color :style line) :box nil :inverse-video nil :foreground "black" :background "white")) (((class mono) (background dark)) (:underline (:color foreground-color :style line) :box nil :inverse-video nil :foreground "white" :background "black"))))
+ '(header-line ((default (:inherit (mode-line))) (((type tty)) (:underline (:color foreground-color :style line) :inverse-video nil))
+                (((class color grayscale) (background light)) (:box nil :foreground "grey20" :background "grey90"))
+                (((class color grayscale) (background dark)) (:box nil :foreground "grey90" :background "grey20"))
+                (((class mono) (background light)) (:underline (:color foreground-color :style line) :box nil :inverse-video nil :foreground "black" :background "white"))
+                (((class mono) (background dark)) (:underline (:color foreground-color :style line) :box nil :inverse-video nil :foreground "white" :background "black"))))
  '(tooltip ((((class color)) (:inherit (variable-pitch) :foreground "black" :background "lightyellow")) (t (:inherit (variable-pitch)))))
  '(mode-line ((t (:background "#404e64" :foreground "white" :box (:line-width 1 :color "#181A1F")))))
  '(mode-line-buffer-id ((t (:weight bold))))
@@ -55,7 +83,11 @@
  '(isearch ((t (:foreground "#282C34" :background "#C678DD"))))
  '(isearch-fail ((t (:foreground "#BE5046" :background nil))))
  '(lazy-highlight ((t (:foreground "#C678DD" :background "#121417" :underline "#C678DD"))))
- '(match ((((class color) (min-colors 88) (background light)) (:background "yellow1")) (((class color) (min-colors 88) (background dark)) (:background "RoyalBlue3")) (((class color) (min-colors 8) (background light)) (:foreground "black" :background "yellow")) (((class color) (min-colors 8) (background dark)) (:foreground "white" :background "blue")) (((type tty) (class mono)) (:inverse-video t)) (t (:background "gray"))))
+ '(match ((((class color) (min-colors 88) (background light)) (:background "yellow1"))
+          (((class color) (min-colors 88) (background dark)) (:background "RoyalBlue3"))
+          (((class color) (min-colors 8) (background light)) (:foreground "black" :background "yellow"))
+          (((class color) (min-colors 8) (background dark)) (:foreground "white" :background "blue"))
+          (((type tty) (class mono)) (:inverse-video t)) (t (:background "gray"))))
  '(next-error ((t (:inherit (region)))))
  '(query-replace ((t (:inherit (isearch)))))
  '(success ((t (:foreground "#98C379"))))
