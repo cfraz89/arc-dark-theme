@@ -1,4 +1,4 @@
-;;; arc-dark-theme.el ---Arc dark theme              -*- lexical-binding: t; -*-
+;;; arc-dark-theme.el --- Arc dark theme             -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019  Christopher Fraser
 
